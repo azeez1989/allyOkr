@@ -30,7 +30,6 @@ function App() {
   },[])
 
   const filterData=(value)=>{
-    console.log(value);
     const filteredData=data.filter(item=>item.category.toLowerCase()===value.toLowerCase());
     setFilteredData(!value ? data : filteredData);
   }
