@@ -1,0 +1,37 @@
+.modal{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body> .close-button{
+    width: 95%;
+}
+
+.modal-body{
+    background:#fff;
+    padding:10px;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.modal-body ul{
+    list-style-type: none;
+}
+
+.key{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.modal-body li{
+    padding:10px;
+}

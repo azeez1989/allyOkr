@@ -1,0 +1,39 @@
+ol.inner-list, ol.inner-list > li {
+  cursor: pointer;
+}
+
+ol.inner-list{
+    list-style-type: lower-latin;
+}
+
+.list-item-title{
+    font-weight:600;
+    font-size: 18px;
+    padding:10px;
+    cursor: pointer;
+}
+
+.list-item{
+    margin-top:10px;
+    text-align: left;
+}
+
+.inner-list {
+    display: none;
+    margin-bottom: 25px;
+    animation: movedown 500ms;
+}
+  
+.inner-list.active {
+    display: block;
+}
+
+.inner-list>li{
+    font-size: 14px;
+    padding: 10px;
+
+}
+
+.inner-list>li:nth-child(even) {
+    background-color: #ddd;
+}

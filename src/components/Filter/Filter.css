@@ -1,0 +1,11 @@
+.filter{
+    width:inherit;
+}
+
+.filter>input {
+    padding: 12px;
+    border-radius: 12px;
+    outline: none;
+    width: 90%;
+}
+  
