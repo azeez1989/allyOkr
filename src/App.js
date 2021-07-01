@@ -51,7 +51,11 @@ function App() {
       <div className="empty-state">No data found</div>
     )}
     {loading && (
-      <div className="loader">Loading</div>
+      <div className="loader">
+      <svg class="svgLoader" viewBox="0 0 1024 1024" width="10em" height="10em">
+      <path fill="#ccc"/>
+    </svg>
+    </div>
     )}
     </div>
   );
