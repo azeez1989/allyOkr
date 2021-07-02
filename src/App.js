@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Header from "./components/Header/Header";
 import ListItem from "./components/ListItem/ListItem";
 import Filter from "./components/Filter/Filter";
 import axios from 'axios';
+import lodash from 'lodash'
 
 import './App.css';
 
@@ -29,6 +30,8 @@ function App() {
     })
   },[])
 
+  const delayedFilter=useCallback(lodash.debounce((q)=>{filterData(q)},500),[data])
+
   const filterData=(value)=>{
     const filteredData=data.filter(item=>item.category.toLowerCase()===value.toLowerCase());
     setFilteredData(!value ? data : filteredData);
@@ -37,7 +40,7 @@ function App() {
   return (
     <div className="App">
     <Header></Header>
-    <Filter setFilterData={filterData}></Filter>
+    <Filter setFilterData={delayedFilter}></Filter>
     {!loading && filteredData.length>0 && (
       <ol>
         {filteredData.map(item=>{

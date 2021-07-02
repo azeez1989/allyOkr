@@ -9,6 +9,7 @@ const Filter = ({ setFilterData }) => {
         setFilterData(e.target.value);
     };
 
+    
     return (
         <div className="filter">
             <input type="text" onChange={filterHandler} placeholder="Filter by category......." value={filter} />
